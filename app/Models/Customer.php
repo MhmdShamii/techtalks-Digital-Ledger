@@ -18,6 +18,10 @@ class Customer extends Model
         'is_active',
     ];
 
+    protected $casts = [
+    'is_active' => 'boolean',
+    ];
+
     public function store(): BelongsTo
     {
         return $this->belongsTo(Store::class);
